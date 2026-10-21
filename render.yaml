@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mp3-converter-app
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 3000
+
